@@ -28,6 +28,8 @@ class Square():
         """width setter"""
         if value <= 0:
             raise ValueError
+        elif type(value) is not int:
+            raise TypeError
         else:
             self.__width = value
 
@@ -41,6 +43,8 @@ class Square():
         """height setter"""
         if value <= 0:
             raise ValueError
+        elif type(value) is not int:
+            raise TypeError
         else:
             self.__height = value
 
