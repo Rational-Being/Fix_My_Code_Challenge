@@ -39,7 +39,10 @@ class square():
     @height.setter
     def height(self, value):
         """height setter"""
-        self.__height = value
+        if value <= 0:
+            raise ValueError
+        else:
+            self.__height = value
 
     def area_of_my_square(self):
         """Area of the square"""
@@ -56,7 +59,7 @@ class square():
 
 if __name__ == "__main__":
 
-    s = square(width=12, height=12)
+    s = square(width=9, height=9)
     print(s)
     print(s.area_of_my_square())
     print(s.permiter_of_my_square())
