@@ -6,26 +6,45 @@ added braket to te declaration + other things
 
 class square():
     """
-    takes width and height and claculates
+    takes __width and __height and claculates
     area and perimeter
     """
 
-    width = 0
-    height = 0
+    __width = 0
+    __height = 0
 
     def __init__(self, width=0, height=0):
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
+
+    @property
+    def width(self):
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        if value <= 0:
+            raise ValueError
+        else:
+            self.__width = value
+
+    @property
+    def height(self):
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        self.__height = value
 
     def area_of_my_square(self):
         """Area of the square"""
-        return self.width * self.width
+        return self.__width * self.__width
 
     def permiter_of_my_square(self):
-        return (self.width * 2) + (self.height * 2)
+        return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
-        return "{}/{}".format(self.width, self.height)
+        return "{}/{}".format(self.__width, self.__height)
 
 
 if __name__ == "__main__":
