@@ -1,7 +1,14 @@
 #!/usr/bin/python3
-
+"""
+te squaare code to complete
+added braket to te declaration + other things
+"""
 
 class square():
+    """
+    takes width and height and claculates
+    area and perimeter
+    """
 
     width = 0
     height = 0
