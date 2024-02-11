@@ -14,15 +14,18 @@ class square():
     __height = 0
 
     def __init__(self, width=0, height=0):
+        """ the constructor """
         self.__width = width
         self.__height = height
 
     @property
     def width(self):
+        """width getter"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """width setter"""
         if value <= 0:
             raise ValueError
         else:
@@ -30,10 +33,12 @@ class square():
 
     @property
     def height(self):
+        """heihgt getter"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """height setter"""
         self.__height = value
 
     def area_of_my_square(self):
@@ -41,9 +46,11 @@ class square():
         return self.__width * self.__width
 
     def permiter_of_my_square(self):
+        """calculating perimeter"""
         return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
+        """ defualt string """
         return "{}/{}".format(self.__width, self.__height)
 
 
